@@ -1,0 +1,12 @@
+### Get All Categories
+GET http://localhost:3000/api/categories
+Accept: application/json
+
+### Create New Category
+POST http://localhost:3000/api/categories
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Baju"
+}
