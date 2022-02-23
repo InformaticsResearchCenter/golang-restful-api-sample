@@ -1,5 +1,5 @@
 # golang-restful-api-sample
-Sample for Building RESTful API using Golang, and MySQL
+Sample for Building RESTful API using Golang, and MariaDB (MySQL)
 
 ## Golang Library
 
@@ -28,4 +28,4 @@ go get github.com/joho/godotenv
 ``
 
 ## NOTE
-This repo is not for building an application but only as an example or you could say as a template for basic web services with Golang and MySQL.
+This repo is not for building an application but only as an example or you could say as a template for basic web services with Golang and MariaDB (MySQL).
