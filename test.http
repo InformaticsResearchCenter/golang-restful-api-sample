@@ -8,5 +8,22 @@ Accept: application/json
 Content-Type: application/json
 
 {
-  "name": "Baju"
+  "name": "Komputer"
 }
+
+### Get Category By ID
+GET http://localhost:3000/api/categories/1
+Accept: application/json
+
+### Update Category By ID
+PUT http://localhost:3000/api/categories/1
+Accept: application/json
+Content-Type: application/json
+
+{
+  "name": "Fashion"
+}
+
+### Delete Category By ID
+DELETE http://localhost:3000/api/categories/1
+Accept: application/json
