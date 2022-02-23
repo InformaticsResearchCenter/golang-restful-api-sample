@@ -6,6 +6,7 @@ import (
 	"github.com/julienschmidt/httprouter"
 	"irc/golang-restful-api-sample/app"
 	"irc/golang-restful-api-sample/controller"
+	"irc/golang-restful-api-sample/exception"
 	"irc/golang-restful-api-sample/helper"
 	"irc/golang-restful-api-sample/repository"
 	"irc/golang-restful-api-sample/service"
@@ -29,6 +30,8 @@ func main() {
 	router.POST("/api/categories", categoryController.Create)
 	router.PUT("/api/categories/:categoryId", categoryController.Update)
 	router.DELETE("/api/categories/:categoryId", categoryController.Delete)
+
+	router.PanicHandler = exception.ErrorHandler
 
 	server := http.Server{
 		Addr:    "localhost:3000",
