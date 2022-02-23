@@ -8,6 +8,7 @@ import (
 	"irc/golang-restful-api-sample/controller"
 	"irc/golang-restful-api-sample/exception"
 	"irc/golang-restful-api-sample/helper"
+	"irc/golang-restful-api-sample/middleware"
 	"irc/golang-restful-api-sample/repository"
 	"irc/golang-restful-api-sample/service"
 	"net/http"
@@ -35,7 +36,7 @@ func main() {
 
 	server := http.Server{
 		Addr:    "localhost:3000",
-		Handler: router,
+		Handler: middleware.NewAuthMiddleware(router),
 	}
 
 	err := server.ListenAndServe()
